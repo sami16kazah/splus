@@ -1,0 +1,213 @@
+  body {
+    background-image: url('../img/back1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+       }
+  
+  .container{
+    height: 100%;
+    margin-top: 10%;
+
+  }
+  
+  .our-team {
+    padding: 30px 0 40px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #2196f387;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #2196f3;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  
+  .our-team:hover .picture::before {
+    height: 100%;
+  }
+  
+  .our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #2196f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+  }
+  
+  .our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+  }
+  .our-team .name{
+    font-weight: bolder;
+   
+  }
+  
+
+  .our-team .team-content a,
+  .team-content p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    font: bo
+  }
+  .our-team .team-content a strong,
+  .team-content p strong,
+  .our-team .name {
+    color: #084677;
+    font-family: cursive;
+    font-style: normal;
+
+  }
+  
+  
+  .our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #2196f3;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .our-team:hover .social {
+    bottom: 0;
+  }
+  
+  .our-team .social li {
+    display: inline-block;
+  }
+  
+  .our-team .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  .our-team .social li a:hover {
+    color: #2196f3;
+    background-color: #f7f5ec;
+  }
+
+@media (width:885px){
+
+}
+/*Start Modal bug*/
+.btn-bug{
+  width: 100%;
+  margin-top: 3px;
+}
+
+.btn-circle.btn-lg {
+  width: 40px;
+  height: 40px;
+  padding: 5px 8px;
+  font-size: 12px;
+  line-height: 0.5;
+  border-radius: 25px;
+}
+.dropdown-toggle::after{
+  display: none;
+}
+ .fixed-bottom-right {position: fixed;}
+.fixed-bottom-right {right:5px; bottom:5px;z-index: 1000;}
+
+.feedback-textarea { height: 180px !important; margin-top: 3px;}
+
+.feedback-reported p, .feedback-failed p  { height: 190px}
+.feedback-report h2{
+  color: #2196f3;
+}
+
+.feedback .dropdown-menu {width: 290px;height: auto;bottom: 50px;}
+.feedback-loading, .feedback-reported, .feedback-failed { display: none }
+.fixed-bottom-right .form-bug{
+  transform: none !important;
+  position: absolute !important;
+  top: 34px !important;
+  left: -280px !important;
+  z-index: 200;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: -22.875rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+@media (width: 667px),(width:640px){
+  .feedback-report h2{
+    padding: 0px;
+    margin: 0px;
+
+  }
+  .fixed-bottom-right .form-bug{
+
+    top: 75px !important;
+    left: -299px !important;
+
+  }
+}
+@media (width:568px),(width:480px){
+  .fixed-bottom-right .form-bug{
+  top: 111px !important;
+  left: -362px !important;
+  }
+}
+@media (width:320px){
+  .fixed-bottom-right .form-bug{
+    left: -270px !important;
+  }
+}
+  

@@ -1,0 +1,54 @@
+app {
+
+<!-- take application name only a string which is the same name of the db  -->
+name('News Websites Generator');
+logo('imgUrl');
+<!-- take email && password -->
+login();
+controller login : home;
+<!-- take email && username && password   -->
+signUp();
+controller signUp : login;
+
+<!-- auth to create  roles admin/user -->
+auth();
+<!-- take email and password and rule && auth must be called to inject users -->
+injectUser(role:'user',ahmadHafez@gmail.com,password123);
+injectUser(role:'admin',ahmadHafez@gmail.com,password123);
+
+
+
+<!-- page must be exist before you route to it  -->
+page(CreateParagraph,form:News , only: admin );
+controller form News : [Title:String , Paragraph:String , Img:imgUrl ];
+page(ViewParagraph,table:News:list:title , only:user);
+controller CreateParagraph : ViewParagraphs ;
+
+
+<!-- form users is already taken by default in the language  and dosen't need controller -->
+page(EditMyinfo , form:users);
+
+
+<!-- create page must contain "home" && contain type form/table && rule -->
+page(home , table:News:list:Title);
+page(home , table:News:block:Paragraph);
+page(home , table:News:metro:Img);
+
+
+<!-- take pages names  -->
+nav();
+controller nav: [home,CreateParagraph,ViewParagraph,EditMyinfo];
+<!-- takes pages name where it could be exist-->
+footer('this all right recived to Damascus Univirsty @2022');
+controller footer: [home,CreateParagraph,ViewParagraph,EditMyinfo];
+
+<!-- Styling -->
+page home : (textColor:black, color:white);
+page CreateParagraph : (textColor:black, color:white , inputColor:red);
+page ViewParagraph : (textColor:black, color:white);
+login : (textColor:black, color:white , inputColor:red);
+signUp: (textColor:black, color:white , inputColor:red);
+nav:(textColor:white, color:red,align:'left');
+footer:(textColor:white , color:red);
+
+}
